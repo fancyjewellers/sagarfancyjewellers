@@ -7,11 +7,9 @@ import Header from "@/components/Header";
 import InstagramSection from "@/components/InstagramSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import ProductSection from "@/components/ProductSection";
-import { useEffect } from "react";
-import Slider from "@/components/Slider";
-import { useState } from "react";
-import FeedbackForm from "@/components/Feedback";
+import { useEffect } from "react";import Slider from "@/components/Slider";
 
+import { useState } from "react";import FeedbackForm from "@/components/Feedback";
 
 export default function Home() {
   const [goldPrice, setGoldPrice] = useState(null);
@@ -49,6 +47,9 @@ export default function Home() {
       <FeedbackForm/>
     </main>
     <Footer/>
+    <div>
+      mukul
+    </div>
     </>
   );
 }
