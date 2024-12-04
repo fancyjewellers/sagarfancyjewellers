@@ -1,44 +1,3 @@
-// import { getProductsByCategory } from '@/lib/actions/product.action'
-// import Image from 'next/image';
-// import React from 'react'
-// import { Product } from '@/lib/types';
-
-
-
-
-// const Pages = async ({ params }: any)=> {
-//     const { category }=await params;
-//     const products = (await getProductsByCategory(category) as unknown) as Product[];
-    
-//   return (
-//     <div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-//           {products.map((product: Product) => (
-//             <div key={product._id} className="bg-white rounded-lg shadow-md overflow-hidden">
-//               <div className="relative h-64">
-//                 <Image
-//                   src={product.primaryImage}
-//                   alt={product.category}
-                 
-//                   layout="fill"
-//                   objectFit="cover"
-//                 />
-//               </div>
-//               <div className="p-4">
-//                 <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
-//                 <p className="text-gray-600 mb-4">₹{product.price.toLocaleString()}</p>
-//                 <button className="w-full bg-gold text-white py-2 rounded hover:bg-yellow-600 transition duration-300">
-//                   Add to Cart
-//                 </button>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default Pages
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
@@ -115,7 +74,7 @@ const Pages = async ({ params }: { params: { category: string } }) => {
     <div className="mx-auto max-w-7xl p-6">
       <FilterSection category={category} totalroducts={products.length} />
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {products.map((product) => (
+        {products.map((product: Product) => (
           <ProductCard key={product._id} product={product} />
         ))}
       </div>
